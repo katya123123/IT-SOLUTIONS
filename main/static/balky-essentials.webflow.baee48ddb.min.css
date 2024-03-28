@@ -222,9 +222,9 @@ body {
   color: #333;
   background-color: #fff;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 25px;
 }
 img {
   max-width: 100%;
@@ -1866,14 +1866,14 @@ textarea.w-select {
 }
 body {
   color: #000;
-  font-family: Robotronika, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-family: Inter, sans-serif;
+  font-size: 0.5rem;
+  line-height: 1.7;
 }
 h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 8rem;
+  font-size: 4rem;
   font-weight: 400;
   line-height: 1;
 }
@@ -2365,7 +2365,7 @@ figcaption {
 }
 .text-size-tiny {
   letter-spacing: -0.07875rem;
-  font-family: Robotronika, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 0.75rem;
   line-height: 100%;
 }
@@ -2416,7 +2416,9 @@ figcaption {
   display: grid;
 }
 .text-size-regular {
-  font-size: 1rem;
+  font-family: Inter, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 .text-size-regular.text-color-white {
   -webkit-text-stroke-color: var(--white-smoke);
@@ -2676,7 +2678,7 @@ figcaption {
 }
 .text-size-medium {
   letter-spacing: -0.05rem;
-  font-family: Robotronika, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.25rem;
   line-height: 1.1;
 }
@@ -2867,7 +2869,7 @@ figcaption {
   display: flex;
 }
 .text-size-regular-alt {
-  font-family: Robotronika, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1rem;
   line-height: 80%;
 }
@@ -2987,12 +2989,13 @@ figcaption {
   overflow: hidden;
 }
 .nav-link-text {
-  font-family: Robotronika, sans-serif;
-  font-size: 0.875rem;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   line-height: 100%;
 }
 .nav-link-text.is--ab {
-  font-size: 0.875rem;
+  font-size: 1rem;
   position: absolute;
   top: 0%;
   bottom: auto;
@@ -3446,7 +3449,7 @@ figcaption {
   width: 100%;
 }
 .text-size-medium-alt {
-  font-family: Robotronika, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.25rem;
 }
 .service-item-img-wrap {
@@ -3758,13 +3761,13 @@ figcaption {
 }
 .footer_links-text {
   letter-spacing: -0.05rem;
-  font-family: Robotronika, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.25rem;
   line-height: 1.1;
 }
 .footer_links-text-ab {
   letter-spacing: -0.05rem;
-  font-family: Robotronika, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.25rem;
   line-height: 1.1;
   position: absolute;
@@ -3814,7 +3817,7 @@ figcaption {
 }
 .text-size-small-alt {
   letter-spacing: -0.035rem;
-  font-family: Robotronika, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 0.875rem;
   line-height: 100%;
 }
@@ -3828,7 +3831,7 @@ figcaption {
 }
 .text-size-small-alt-ab {
   letter-spacing: -0.035rem;
-  font-family: Robotronika, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 0.875rem;
   line-height: 100%;
   position: absolute;
@@ -4917,8 +4920,8 @@ figcaption {
   font-display: swap;
 }
 @font-face {
-  font-family: "Ppradiogrotesk";
-  src: url("https://assets.website-files.com/651b57affd6552896d8e6006/651b5b948c53cdf2ba6870a3_PPRadioGrotesk-Regular.woff2") format("woff2");
+  font-family: "Inter";
+  src: url("fonts/Inter-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -4983,8 +4986,8 @@ figcaption {
   font-display: swap;
 }
 @font-face {
-font-family: "Robotronika";
-src: url("Robotronika-Regular.ttf") format("truetype");
+font-family: "Robtronika";
+src: url("fonts/Robtronika-Regular.ttf") format("truetype");
 font-weight: 400;
 font-style: normal;
 }
