@@ -1914,6 +1914,7 @@ initiateRandomAnimation();
           </div>
       </div>
   </div>
+  <!--CONTACT-->
   <div class="w-layout-grid grid_duplicate-price">
       <div id="w-node-_479d1c22-1cc3-4567-c74c-b396381622c2-6d8e61f0" class="price-section-main">
           <div class="section_content-index">
@@ -1924,81 +1925,178 @@ initiateRandomAnimation();
                   <div class="price-section-tabs-menu w-tab-menu" role="tablist">
                       <a data-w-tab="Branding" class="price-section-tabs-link w-inline-block w-tab-link w--current" id="w-tabs-0-data-w-tab-0" href="https://www.balky.studio/?ref=uijarcom#w-tabs-0-data-w-pane-0" role="tab" aria-controls="w-tabs-0-data-w-pane-0"
                           aria-selected="true">
-                          <div class="heading-style-h6">Branding</div>
+                          <div class="heading-style-h6">Разработка сайта</div>
                       </a>
                       <a data-w-tab="Web Design" class="price-section-tabs-link w-inline-block w-tab-link" tabindex="-1" id="w-tabs-0-data-w-tab-1" href="https://www.balky.studio/?ref=uijarcom#w-tabs-0-data-w-pane-1" role="tab" aria-controls="w-tabs-0-data-w-pane-1"
                           aria-selected="false">
-                          <div class="heading-style-h6">Web Design</div>
+                          <div class="heading-style-h6">Фирменный стиль и дизайн</div>
                       </a>
                       <a data-w-tab="Product Design" class="price-section-tabs-link w-inline-block w-tab-link" tabindex="-1" id="w-tabs-0-data-w-tab-2" href="https://www.balky.studio/?ref=uijarcom#w-tabs-0-data-w-pane-2" role="tab" aria-controls="w-tabs-0-data-w-pane-2"
                           aria-selected="false">
-                          <div class="heading-style-h6">Product Design</div>
+                          <div class="heading-style-h6">Мобильное приложение</div>
+                      </a>
+                      <a data-w-tab="Other" class="price-section-tabs-link w-inline-block w-tab-link" tabindex="-1" id="w-tabs-0-data-w-tab-2" href="https://www.balky.studio/?ref=uijarcom#w-tabs-0-data-w-pane-2" role="tab" aria-controls="w-tabs-0-data-w-pane-2"
+                          aria-selected="false">
+                          <div class="heading-style-h6">Другое</div>
                       </a>
                   </div>
                   <div class="price-section-tabs-content w-tab-content">
-                      <div data-w-tab="Branding" class="price-section-tabs-pane w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0" role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-0">
+                    
+                    <div data-w-tab="Branding" class="price-section-tabs-pane w-tab-pane" id="w-tabs-0-data-w-pane-1" role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-1">
+                        <form id="branding-form" method="POST">
+                            {% csrf_token %}
+                            <label>Вопрос 1</label>
+                            {{ form.firstQuest }}
+                            <label>Вопрос 2</label>
+                            {{ form.secondtQuest }}
+                            <div class="price-option" data-question="deliverables" data-value="1" data-single-select="true">
+                                {{ form.name }}
+                            </div>
+                            <label>Телефон</label>
+                            {{ form.phone }}
+
+                            <button type="submit">Submit</button>                  
+                        </form>
+
+                        <div data-calculator="web" class="price-section-wrap">
+                            <!--div class="price-final-wrap">
+                                <div class="price-final-parent">
+                                    <p class="price-final-p-dom"></p>
+                                    <div class="heading-style-h6">Est: $</div><span><div data-total="web" class="heading-style-h6">0</div></span>
+                                    <p></p>
+                                </div>
+                            </div-->
+                            <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">1. Какой тип сайта вам требуется?</div></label>
+                                <div class="price-option-wrap">
+                                    <div class="price-option" data-question="type" data-value="1199" data-single-select="true">
+                                        <div class="heading-style-h6">Одностраничный сайт</div>
+                                    </div>
+                                    <div class="price-option" data-question="type" data-value="3499" data-single-select="true">
+                                        <div class="heading-style-h6">Многостраничный сайт</div>
+                                    </div>
+                                    <div class="price-option" data-question="type" data-value="6999" data-single-select="true">
+                                        <div class="heading-style-h6">Интернет-магазин</div>
+                                    </div>
+                                    <div class="price-option" data-question="type" data-value="6999" data-single-select="true">
+                                      <div class="heading-style-h6">Другое</div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">2. У вас уже есть сайт?</div></label>
+                                <div class="price-option-wrap">
+                                    <div class="price-option" data-question="timeline" data-value="1999" data-single-select="true">
+                                        <div class="heading-style-h6">Да, хочу его переделать</div>
+                                    </div>
+                                    <div class="price-option" data-question="timeline" data-value="999" data-single-select="true">
+                                        <div class="heading-style-h6">Да, хочу дополнить его</div>
+                                    </div>
+                                    <div class="price-option" data-question="timeline" data-value="1" data-single-select="true">
+                                        <div class="heading-style-h6">Нет</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">3. Мы свяжемся с вами!</div></label>
+                                <div class="price-option-wrap">
+                                    <div class="price-option" data-question="deliverables" data-value="1" data-single-select="true">
+                                        <div class="heading-style-h6">Ваше имя</div>
+                                    </div>
+                                    <div class="price-option" data-question="deliverables" data-value="999" data-single-select="true">
+                                        <div class="heading-style-h6">Ваш номер телефона</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-divide-line"></div>
+                            <div class="price-btm-info-wrap">
+                                <div class="price-info-pg">
+                                    <p class="text-size-regular text-color-white">
+                                      Нажимая на кнопку "Связаться", Вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности. 
+                                      </p>
+                                </div>
+                                <a data-w-id="d1809c3d-2715-5d30-1b7e-7cdb9e3331d2" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" href="https://3ipk66rd6od.typeform.com/to/l2NthPBK"
+                                    target="_blank" class="price-contact-btn w-inline-block">
+                                    <div style="color:rgb(255,77,0)" class="price-contact-btn-top">
+                                        <div class="text-size-medium">Связаться со мной!</div>
+                                    </div>
+                                    <div class="price-contact-btn-btm">
+                                        <div class="price-contact-btm-pg">
+                                            <div class="text-size-medium">Готовы забустить ваш бизнес?</div>
+                                        </div>
+                                        <div class="work_item-btn-icon-parent">
+                                            <div style="transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="work_item-btn-icon-rel w-embed"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.66663 11.8334L11.3333 5.16675M11.3333 5.16675H4.66663M11.3333 5.16675V11.8334" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div>
+                                            <div style="transform: translate3d(-100%, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="work_item-btn-icon-ab w-embed"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.66663 11.8334L11.3333 5.16675M11.3333 5.16675H4.66663M11.3333 5.16675V11.8334" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 0%;" class="price-contact-bg"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-w-tab="Web Design" class="price-section-tabs-pane w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0" role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-0">
                           <div data-calculator="branding" class="price-section-wrap">
                               <div></div>
-                              <div class="price-final-wrap">
+                              <!--div class="price-final-wrap">
                                   <div class="price-final-parent">
                                       <p class="price-final-p-dom"></p>
                                       <div class="heading-style-h6">Est: $</div><span><div data-total="branding" class="heading-style-h6">0</div></span>
                                       <p></p>
                                   </div>
-                              </div>
-                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">1. Type of Branding Required:</div></label>
+                              </div-->
+                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">1. Какой элемент фирменного стиля вам нужен?</div></label>
                                   <div class="price-option-wrap">
                                       <div class="price-option" data-question="type" data-value="2499" data-single-select="true">
-                                          <div class="heading-style-h6">Logo Design</div>
-                                      </div>
-                                      <div class="price-option" data-question="type" data-value="5499" data-single-select="true">
-                                          <div class="heading-style-h6">Essential Visual Identity</div>
+                                          <div class="heading-style-h6">Логотип</div>
                                       </div>
                                       <div class="price-option" data-question="type" data-value="9999" data-single-select="true">
-                                          <div class="heading-style-h6">Complete Brand Strategy</div>
-                                      </div>
+                                        <div class="heading-style-h6">Брендбук</div>
+                                    </div>
+                                    <div class="price-option" data-question="type" data-value="9999" data-single-select="true">
+                                        <div class="heading-style-h6">Другое</div>
+                                    </div>
                                   </div>
                               </div>
-                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">2. Project Urgency:</div></label>
+                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">2. Есть ли у вас уже элементы фирменного стиля?</div></label>
                                   <div class="price-option-wrap">
                                       <div class="price-option" data-question="timeline" data-value="1999" data-single-select="true">
-                                          <div class="heading-style-h6">Very Urgent</div>
+                                          <div class="heading-style-h6">Да, хочу их пересмотреть</div>
                                       </div>
                                       <div class="price-option" data-question="timeline" data-value="999" data-single-select="true">
-                                          <div class="heading-style-h6">Still Important</div>
+                                          <div class="heading-style-h6">Да, хочу дополнить</div>
                                       </div>
                                       <div class="price-option" data-question="timeline" data-value="1" data-single-select="true">
-                                          <div class="heading-style-h6">Flexible</div>
+                                          <div class="heading-style-h6">Нет</div>
                                       </div>
                                   </div>
                               </div>
-                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">3. Extra Deliverables</div></label>
+                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">3. Мы свяжемся с вами!</div></label>
                                   <div class="price-option-wrap">
-                                      <div class="price-option" data-question="deliverables" data-value="1499" data-single-select="false">
-                                          <div class="heading-style-h6">Stationery Design</div>
-                                      </div>
-                                      <div class="price-option" data-question="deliverables" data-value="1999" data-single-select="false">
-                                          <div class="heading-style-h6">Custom Illustrations</div>
-                                      </div>
-                                      <div class="price-option" data-question="deliverables" data-value="3999" data-single-select="false">
-                                          <div class="heading-style-h6">Motion Design</div>
-                                      </div>
+                                        <input class="price-option" data-question="deliverables" data-value="1499" data-single-select="false">
+                                            <div class="heading-style-h6">Ваше имя</div>
+                                        </input>
+                                        <input class="price-option" data-question="deliverables" data-value="1999" data-single-select="false">
+                                            <div class="heading-style-h6">Ваш номер телефона</div>
+                                        </input>
                                   </div>
                               </div>
                               <div class="price-divide-line"></div>
                               <div class="price-btm-info-wrap">
                                   <div class="price-info-pg">
-                                      <p class="text-size-regular text-color-white">Our pricing calculator provides a quick estimate to get you started, but your unique vision may entail specific needs that could adjust the final cost. The pricing here isn't set in stone and will depend heavily
-                                          on the final scope of your project.</p>
+                                    <p class="text-size-regular text-color-white">
+                                        Нажимая на кнопку "Связаться", Вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности. 
+                                    </p>
                                   </div>
                                   <a data-w-id="e4e5d3c1-7ad1-5504-f26d-5d27ef6eec80" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" href="https://3ipk66rd6od.typeform.com/to/l2NthPBK"
                                       target="_blank" class="price-contact-btn w-inline-block">
                                       <div style="color:rgb(255,77,0)" class="price-contact-btn-top">
-                                          <div class="text-size-medium">Contact</div>
+                                          <div class="text-size-medium">Связаться со мной!</div>
                                       </div>
                                       <div class="price-contact-btn-btm">
                                           <div class="price-contact-btm-pg">
-                                              <div class="text-size-medium">Ready to Elevate Your Brand?</div>
+                                              <div class="text-size-medium">Готовы забустить ваш бизнес?</div>
                                           </div>
                                           <div class="work_item-btn-icon-parent">
                                               <div style="transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="work_item-btn-icon-rel w-embed"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2014,148 +2112,68 @@ initiateRandomAnimation();
                               </div>
                           </div>
                       </div>
-                      <div data-w-tab="Web Design" class="price-section-tabs-pane w-tab-pane" id="w-tabs-0-data-w-pane-1" role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-1">
-                          <div data-calculator="web" class="price-section-wrap">
-                              <div></div>
-                              <div class="price-final-wrap">
-                                  <div class="price-final-parent">
-                                      <p class="price-final-p-dom"></p>
-                                      <div class="heading-style-h6">Est: $</div><span><div data-total="web" class="heading-style-h6">0</div></span>
-                                      <p></p>
-                                  </div>
-                              </div>
-                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">1. Type of Website Required:</div></label>
-                                  <div class="price-option-wrap">
-                                      <div class="price-option" data-question="type" data-value="1199" data-single-select="true">
-                                          <div class="heading-style-h6">Single Page</div>
-                                      </div>
-                                      <div class="price-option" data-question="type" data-value="3499" data-single-select="true">
-                                          <div class="heading-style-h6">Multi-Page</div>
-                                      </div>
-                                      <div class="price-option" data-question="type" data-value="6999" data-single-select="true">
-                                          <div class="heading-style-h6">E-commerce</div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">2. Project Urgency:</div></label>
-                                  <div class="price-option-wrap">
-                                      <div class="price-option" data-question="timeline" data-value="1999" data-single-select="true">
-                                          <div class="heading-style-h6">Very Urgent</div>
-                                      </div>
-                                      <div class="price-option" data-question="timeline" data-value="999" data-single-select="true">
-                                          <div class="heading-style-h6">Still Important</div>
-                                      </div>
-                                      <div class="price-option" data-question="timeline" data-value="1" data-single-select="true">
-                                          <div class="heading-style-h6">Flexible</div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">3. Layout &amp; Interaction Complexity</div></label>
-                                  <div class="price-option-wrap">
-                                      <div class="price-option" data-question="deliverables" data-value="1" data-single-select="true">
-                                          <div class="heading-style-h6">Simple</div>
-                                      </div>
-                                      <div class="price-option" data-question="deliverables" data-value="999" data-single-select="true">
-                                          <div class="heading-style-h6">Middling</div>
-                                      </div>
-                                      <div class="price-option" data-question="deliverables" data-value="1999" data-single-select="true">
-                                          <div class="heading-style-h6">Complex (Go wild)</div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="price-divide-line"></div>
-                              <div class="price-btm-info-wrap">
-                                  <div class="price-info-pg">
-                                      <p class="text-size-regular text-color-white">Our pricing calculator provides a quick estimate to get you started, but your unique vision may entail specific needs that could adjust the final cost. The pricing here isn't set in stone and will depend heavily
-                                          on the final scope of your project.</p>
-                                  </div>
-                                  <a data-w-id="d1809c3d-2715-5d30-1b7e-7cdb9e3331d2" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" href="https://3ipk66rd6od.typeform.com/to/l2NthPBK"
-                                      target="_blank" class="price-contact-btn w-inline-block">
-                                      <div style="color:rgb(255,77,0)" class="price-contact-btn-top">
-                                          <div class="text-size-medium">Contact</div>
-                                      </div>
-                                      <div class="price-contact-btn-btm">
-                                          <div class="price-contact-btm-pg">
-                                              <div class="text-size-medium">Ready to Elevate Your Brand?</div>
-                                          </div>
-                                          <div class="work_item-btn-icon-parent">
-                                              <div style="transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="work_item-btn-icon-rel w-embed"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.66663 11.8334L11.3333 5.16675M11.3333 5.16675H4.66663M11.3333 5.16675V11.8334" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg></div>
-                                              <div style="transform: translate3d(-100%, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="work_item-btn-icon-ab w-embed"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.66663 11.8334L11.3333 5.16675M11.3333 5.16675H4.66663M11.3333 5.16675V11.8334" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg></div>
-                                          </div>
-                                      </div>
-                                      <div style="height: 0%;" class="price-contact-bg"></div>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
+                      
                       <div data-w-tab="Product Design" class="price-section-tabs-pane w-tab-pane" id="w-tabs-0-data-w-pane-2" role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-2">
                           <div data-calculator="product" class="price-section-wrap">
-                              <div></div>
-                              <div class="price-final-wrap is--product">
+                              <!--div class="price-final-wrap is--product">
                                   <div class="text-size-medium text-color-white opacity-60">**Product Design Pricing is Extremely Varaible.</div>
                                   <div class="price-final-parent">
                                       <p class="price-final-p-dom"></p>
                                       <div class="heading-style-h6">Est: $</div><span><div data-total="product" class="heading-style-h6">0</div></span>
                                       <p></p>
                                   </div>
-                              </div>
-                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">1. How would you like to engage us:</div></label>
+                              </div-->
+                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">1. Какой тип МП вам необходим?</div></label>
                                   <div class="price-option-wrap">
                                       <div class="price-option" data-question="type" data-value="19999" data-single-select="true">
-                                          <div class="heading-style-h6">One-Time Project</div>
+                                          <div class="heading-style-h6">Интернет-магазин</div>
                                       </div>
                                       <div class="price-option" data-question="type" data-value="6499" data-single-select="true">
-                                          <div class="heading-style-h6">Monthly Retainer</div>
+                                          <div class="heading-style-h6">Бонусная программа</div>
                                       </div>
                                       <div class="price-option" data-question="type" data-value="1" data-single-select="true">
-                                          <div class="heading-style-h6">Not Sure</div>
+                                          <div class="heading-style-h6">Другое</div>
                                       </div>
                                   </div>
                               </div>
-                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">2. Project Urgency:</div></label>
+                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">2. Для какой платформы необходимо МП?</div></label>
                                   <div class="price-option-wrap">
                                       <div class="price-option" data-question="timeline" data-value="2999" data-single-select="true">
-                                          <div class="heading-style-h6">Very Urgent</div>
+                                          <div class="heading-style-h6">Android</div>
                                       </div>
                                       <div class="price-option" data-question="timeline" data-value="1999" data-single-select="true">
-                                          <div class="heading-style-h6">Still Important</div>
+                                          <div class="heading-style-h6">iOS</div>
                                       </div>
                                       <div class="price-option" data-question="timeline" data-value="1" data-single-select="true">
-                                          <div class="heading-style-h6">Flexible</div>
+                                          <div class="heading-style-h6">Кроссплатформенное</div>
                                       </div>
                                   </div>
                               </div>
-                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">3. Scope of design needs:</div></label>
+                              <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">3. Мы свяжемся с вами!</div></label>
                                   <div class="price-option-wrap">
                                       <div class="price-option" data-question="deliverables" data-value="1" data-single-select="true">
-                                          <div class="heading-style-h6">Quick &amp; Dirty</div>
+                                          <div class="heading-style-h6">Ваше имя</div>
                                       </div>
                                       <div class="price-option" data-question="deliverables" data-value="999" data-single-select="true">
-                                          <div class="heading-style-h6">Standard</div>
-                                      </div>
-                                      <div class="price-option" data-question="deliverables" data-value="2999" data-single-select="true">
-                                          <div class="heading-style-h6">Whole 9-Yards</div>
+                                          <div class="heading-style-h6">Ваш номер телефона</div>
                                       </div>
                                   </div>
                               </div>
                               <div class="price-divide-line"></div>
                               <div class="price-btm-info-wrap">
                                   <div class="price-info-pg">
-                                      <p class="text-size-regular text-color-white">Our pricing calculator provides a quick estimate to get you started, but your unique vision may entail specific needs that could adjust the final cost. The pricing here isn't set in stone and will depend heavily
-                                          on the final scope of your project.</p>
+                                      <p class="text-size-regular text-color-white">
+                                        Нажимая на кнопку "Связаться", Вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности. 
+                                        </p>
                                   </div>
                                   <a data-w-id="4abe1527-de4c-9d18-bf0e-a5b57ab80503" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" href="https://www.balky.studio/?ref=uijarcom#https://3ipk66rd6od.typeform.com/to/l2NthPBK"
                                       target="_blank" class="price-contact-btn w-inline-block">
                                       <div style="color:rgb(255,77,0)" class="price-contact-btn-top">
-                                          <div class="text-size-medium">Contact</div>
+                                          <div class="text-size-medium">Связаться со мной!</div>
                                       </div>
                                       <div class="price-contact-btn-btm">
                                           <div class="price-contact-btm-pg">
-                                              <div class="text-size-medium">Ready to Elevate Your Brand?</div>
+                                              <div class="text-size-medium">Готовы забустить ваш бизнес?</div>
                                           </div>
                                           <div class="work_item-btn-icon-parent">
                                               <div style="transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="work_item-btn-icon-rel w-embed"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2171,6 +2189,84 @@ initiateRandomAnimation();
                               </div>
                           </div>
                       </div>
+                      <div data-w-tab="Other" class="price-section-tabs-pane w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-0" role="tabpanel" aria-labelledby="w-tabs-0-data-w-tab-0">
+                        <div data-calculator="branding" class="price-section-wrap">
+                            <!--div class="price-final-wrap">
+                                <div class="price-final-parent">
+                                    <p class="price-final-p-dom"></p>
+                                    <div class="heading-style-h6">Est: $</div><span><div data-total="branding" class="heading-style-h6">0</div></span>
+                                    <p></p>
+                                </div>
+                            </div-->
+                            <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">1. Чем мы можем вам помочь?</div></label>
+                                <div class="price-option-wrap">
+                                    <div class="price-option" data-question="type" data-value="2499" data-single-select="true">
+                                        <div class="heading-style-h6">SEO-оптимизация и продвижение</div>
+                                    </div>
+                                    <div class="price-option" data-question="type" data-value="5499" data-single-select="true">
+                                        <div class="heading-style-h6">Разработка бота</div>
+                                    </div>
+                                    <div class="price-option" data-question="type" data-value="9999" data-single-select="true">
+                                        <div class="heading-style-h6">CRM или ERP система</div>
+                                    </div>
+                                    <div class="price-option" data-question="type" data-value="9999" data-single-select="true">
+                                        <div class="heading-style-h6">Другое</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">2. Есть ли у вас техническое задание?</div></label>
+                                <div class="price-option-wrap">
+                                    <div class="price-option" data-question="timeline" data-value="1999" data-single-select="true">
+                                        <div class="heading-style-h6">Да, но его нужно доработать</div>
+                                    </div>
+                                    <div class="price-option" data-question="timeline" data-value="999" data-single-select="true">
+                                        <div class="heading-style-h6">Да, полностью готово</div>
+                                    </div>
+                                    <div class="price-option" data-question="timeline" data-value="1" data-single-select="true">
+                                        <div class="heading-style-h6">Нет</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-group"><label class="price-label"><div class="heading-style-h4 text-color-white">3. Мы свяжемся с вами!</div></label>
+                                <div class="price-option-wrap">
+                                    <div class="price-option" data-question="deliverables" data-value="1499" data-single-select="false">
+                                        <div class="heading-style-h6">Ваше имя</div>
+                                    </div>
+                                    <div class="price-option" data-question="deliverables" data-value="1999" data-single-select="false">
+                                        <div class="heading-style-h6">Ваш номер телефона</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-divide-line"></div>
+                            <div class="price-btm-info-wrap">
+                                <div class="price-info-pg">
+                                    <p class="text-size-regular text-color-white">
+                                        Нажимая на кнопку "Связаться", Вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности. 
+                                    </p>
+                                </div>
+                                <a data-w-id="e4e5d3c1-7ad1-5504-f26d-5d27ef6eec80" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" href="https://3ipk66rd6od.typeform.com/to/l2NthPBK"
+                                    target="_blank" class="price-contact-btn w-inline-block">
+                                    <div style="color:rgb(255,77,0)" class="price-contact-btn-top">
+                                        <div class="text-size-medium">Связаться со мной!</div>
+                                    </div>
+                                    <div class="price-contact-btn-btm">
+                                        <div class="price-contact-btm-pg">
+                                            <div class="text-size-medium">Готовы забустить ваш бизнес?</div>
+                                        </div>
+                                        <div class="work_item-btn-icon-parent">
+                                            <div style="transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="work_item-btn-icon-rel w-embed"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.66663 11.8334L11.3333 5.16675M11.3333 5.16675H4.66663M11.3333 5.16675V11.8334" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div>
+                                            <div style="transform: translate3d(-100%, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="work_item-btn-icon-ab w-embed"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.66663 11.8334L11.3333 5.16675M11.3333 5.16675H4.66663M11.3333 5.16675V11.8334" stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 0%;" class="price-contact-bg"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                   </div>
               </div>
           </div>
@@ -2749,6 +2845,49 @@ initiateRandomAnimation();
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
+<script src="https://unpkg.com/imask"></script>
+<script>
+    var phoneMask = IMask(
+      document.querySelectorAll('#fb_phone')[0], {
+          mask: '+{7} (000) 000-00-00'
+          }
+      );
+  
+  
+  $('#fb_phone').on('input', function() {
+      validatePhoneNumber($(this).val(),$(this));
+   });
+  
+  function validatePhoneNumber(phoneNumber, phone_input) {
+      var regex = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+      var isValid = regex.test(phoneNumber);
+  
+      if (isValid) {
+          phone_input.removeClass("is-invalid");
+      } else {
+          phone_input.addClass("is-invalid")
+      }
+  }
+  </script>
+
+<script>
+    $(function(){
+        $('#branding-form').on('submit', function(event) {
+            event.preventDefault();
+            $.ajax({
+                url: '/',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function(response){
+                    if (response.success) {
+                        alert('davinci?')
+                    }
+                }
+            })
+        })
+    })
+</script>
 
 <script type="text/javascript">
     $('.center').slick({

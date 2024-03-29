@@ -2553,7 +2553,7 @@ figcaption {
 }
 
 .heading-style-feedback {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1;
 }
@@ -3026,6 +3026,14 @@ figcaption {
   padding-bottom: 10rem;
   position: relative;
 }
+
+.feedback-section {
+  z-index: 3;
+  background-color: var(--black);
+  padding-bottom: 2.5rem;
+  position: relative;
+}
+
 .price-section {
   z-index: 3;
   background-color: var(--linen);
@@ -3437,7 +3445,7 @@ figcaption {
 
 .feedback-main-wrap {
   flex-direction: column;
-  margin-top: 5rem;
+  margin-top: 4rem;
   display: flex;
 }
 
