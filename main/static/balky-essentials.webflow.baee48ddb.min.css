@@ -2417,7 +2417,7 @@ figcaption {
 }
 .text-size-regular {
   font-family: Inter, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 .text-size-regular.text-color-white {
@@ -2549,8 +2549,15 @@ figcaption {
 .heading-style-h2 {
   font-size: 4rem;
   font-weight: 400;
+  line-height: 1.2;
+}
+
+.heading-style-feedback {
+  font-size: 1.6rem;
+  font-weight: 400;
   line-height: 1;
 }
+
 .fs-styleguide_label {
   color: #fff;
   background-color: #0073e6;
@@ -3019,6 +3026,14 @@ figcaption {
   padding-bottom: 10rem;
   position: relative;
 }
+
+.feedback-section {
+  z-index: 3;
+  background-color: var(--black);
+  padding-bottom: 2.5rem;
+  position: relative;
+}
+
 .price-section {
   z-index: 3;
   background-color: var(--linen);
@@ -3427,6 +3442,13 @@ figcaption {
   margin-top: 10rem;
   display: flex;
 }
+
+.feedback-main-wrap {
+  flex-direction: column;
+  margin-top: 4rem;
+  display: flex;
+}
+
 .service-item-main {
   grid-column-gap: 3rem;
   grid-row-gap: 3rem;
@@ -3438,12 +3460,30 @@ figcaption {
   display: grid;
   position: relative;
 }
+
+.service-item-main-feedback {
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  margin-bottom: 5rem;
+  padding-bottom: 5rem;
+  display: grid;
+  position: relative;
+  margin: 0 2rem;
+  min-height: 40rem;
+  max-height: 40rem;
+}
+
 .service-item-content {
   grid-column-gap: 2.5rem;
   grid-row-gap: 2.5rem;
   flex-direction: column;
   align-items: flex-start;
   display: flex;
+  background-color: var(--black);
+  z-index: 2;
 }
 .service-item-pg {
   width: 100%;
@@ -3459,6 +3499,7 @@ figcaption {
 }
 .service-img {
   width: 100%;
+  object-fit: cover;
 }
 .service-item-line {
   height: 1px;
@@ -3481,6 +3522,9 @@ figcaption {
 }
 .service-img-height {
   position: relative;
+  object-fit: fill;
+  height: 100%;
+  display: flex;
 }
 .text-color-orange {
   color: var(--orange-red);
@@ -4763,7 +4807,7 @@ figcaption {
   grid-area: 1/2/2/8;
 }
 #w-node-_6db92735-afc8-a196-1303-d567094a4dcf-6d8e61f0 {
-  grid-area: 1/1/2/3;
+  grid-area: 1/1/2/4;
 }
 #w-node-_730b87f4-4597-0eed-013b-224ae0ddb406-6d8e61f0 {
   grid-area: 1/4/2/7;
