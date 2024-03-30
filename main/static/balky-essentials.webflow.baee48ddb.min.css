@@ -133,7 +133,15 @@ input::-moz-focus-inner {
 }
 input {
   line-height: normal;
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
+  background-color: var(--white-smoke);
+  outline: 0;
+  outline-offset: 0;
+  background: none;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -2287,6 +2295,12 @@ figcaption {
   font-weight: 400;
   line-height: 1;
 }
+
+.subtitle {
+  font-size: 1.8rem !important;
+  text-align: center !important;
+}
+
 .text-rich-text h1,
 .text-rich-text h2,
 .text-rich-text h3,
@@ -2518,7 +2532,14 @@ figcaption {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.1;
+  text-wrap: nowrap;
 }
+
+.wrapped {
+  text-wrap: wrap !important;
+  text-align: right;
+}
+
 .padding-section-large {
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -2688,6 +2709,7 @@ figcaption {
   font-family: Inter, sans-serif;
   font-size: 1.25rem;
   line-height: 1.1;
+  text-align: left;
 }
 .fs-styleguide_section {
   grid-column-gap: 6rem;
@@ -2992,12 +3014,13 @@ figcaption {
   position: relative;
 }
 .nav-link_text {
+  text-wrap: nowrap;
   position: relative;
   overflow: hidden;
 }
 .nav-link-text {
   font-family: Inter, sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   line-height: 100%;
 }
@@ -3050,7 +3073,7 @@ figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20.4375rem;
+  margin-top: auto;
   margin-bottom: auto;
   display: flex;
 }
@@ -3543,11 +3566,11 @@ figcaption {
   margin-top: 2.5rem;
 }
 .price-section-tabs-menu {
-  grid-column-gap: 2.5rem;
-  grid-row-gap: 2.5rem;
+  grid-row-gap: 1.5rem;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
   display: flex;
+  flex-wrap: wrap;
 }
 .price-section-tabs-link {
   min-width: 12.125rem;
@@ -3601,12 +3624,37 @@ figcaption {
   opacity: 1;
   color: var(--orange-red);
 }
+
+.price-option-input {
+  border: 1px solid var(--white-smoke);
+  opacity: 0.6;
+  color: var(--white-smoke);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.price-option-input:hover {
+  background-color: rgba(239, 239, 239, 0.1);
+}
+.price-option-input:active {
+  transform: scale(0.9);
+}
+.price-option-input.selected {
+  border-style: dashed;
+  border-color: var(--orange-red);
+  background-color: var(--white-smoke);
+  opacity: 1;
+  color: var(--orange-red);
+}
+
 .price-option-wrap {
   grid-column-gap: 1.25rem;
   grid-row-gap: 1.25rem;
   justify-content: flex-start;
   align-items: flex-start;
   display: flex;
+  flex-wrap: wrap;
 }
 .price-group {
   grid-column-gap: 2.5rem;
@@ -3632,6 +3680,7 @@ figcaption {
 .price-info-pg {
   max-width: 24.75rem;
   opacity: 0.6;
+  padding-right: 4rem;
 }
 .price-contact-btn {
   grid-column-gap: 3rem;
@@ -3858,6 +3907,7 @@ figcaption {
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  text-wrap: nowrap;
 }
 .text-size-small-alt {
   letter-spacing: -0.035rem;
@@ -4294,6 +4344,7 @@ figcaption {
   }
   .heading-style-h6 {
       font-size: 0.75rem;
+      text-wrap: nowrap;
   }
   .padding-section-large {
       padding-top: 4rem;
